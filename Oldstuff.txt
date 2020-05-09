@@ -1,0 +1,7 @@
+# Calutating Crop
+mycrop = img[540:540+(657-540), 751:751+(856-751) ]
+myPicture = np.array(pyscreenshot.grab().convert('RGB'))
+
+
+cv2.imshow("screen grab",myPicture)
+cv2.waitKey(0)
