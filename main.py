@@ -22,6 +22,7 @@ resultArray = []
 numImages = 0
 nameFiles = ""
 
+
 for pictureNames in picturesDic:
     # Check for each photo
     print("We're looking for: {}".format(pictureNames))
