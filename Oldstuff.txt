@@ -5,3 +5,48 @@ myPicture = np.array(pyscreenshot.grab().convert('RGB'))
 
 cv2.imshow("screen grab",myPicture)
 cv2.waitKey(0)
+
+
+## Things I want
+I want the terminal to print to a window in the gui
+the gui needs minimize and other things
+I want the gui to preview and load the image files in
+
+
+
+
+# Old slider Code
+
+        #self.mySlider.setInvertedAppearance(3)
+        #self.mySlider.setGeometry(50,50,320,200)
+        #self.mySliderValue = 0.1
+        #self.mySlider.valueChanged[int].connect(self.valueChanged)
+        #layout.addWidget(self.mySlider)
+
+    #def valueChanged(self):
+        #self.mySliderValue = self.mySlider.value()
+        #self.mySliderValue = self.mySliderValue / 100
+        #self.mySliderValue = 1 - self.mySliderValue
+        #print(self.mySliderValue)
+
+# Old Search Code
+
+# Find Images area
+picturesDic = {}
+with os.scandir('testpictures/') as files:
+    for file in files:
+        print(file.path)
+        print(file.name)
+        picturesDic.update({file.name:file.path})
+
+
+print(picturesDic)
+
+for names in picturesDic:
+    print(names)
+    print(picturesDic[names])
+
+resultArray = []
+
+numImages = 0
+nameFiles = ""
