@@ -1,10 +1,7 @@
 import cv2
-import numpy as np
 import pyscreenshot
-from matplotlib import pyplot as plt
 from skimage.measure import compare_ssim
 
-import time
 
 def imageSearch(pathto):
     # Full photo area
@@ -80,11 +77,12 @@ def imageSearch(pathto):
         middle2 = yCord + length2
         print("x: {} y: {}".format(middle,middle2))
         returnValues = []
-        if (score*100) > 85:
+        if (score*100) > 50:
             # print("The image was found")
             returnValues.append("true")
             returnValues.append(int(top_left[0]+30))
             returnValues.append(int(bottom_right[1]-30))
+            returnValues.append(score*100)
             # print(returnValues)
             return(returnValues)
         else:
@@ -92,6 +90,7 @@ def imageSearch(pathto):
             returnValues.append("false")
             returnValues.append(int(top_left[0]+30))
             returnValues.append(int(bottom_right[1]-30))
+            returnValues.append(score * 100)
             # print(returnValues)
             return(returnValues)
 
